@@ -1,5 +1,7 @@
 import React from "react";
+import { HashRouter as Router } from "react-router-dom";
 
+import AsideMenu from "./components/AsideMenu/AsideMenu";
 import Header from "./components/Header/Header";
 import StoreProvider from "./store/StoreProvider";
 
@@ -9,7 +11,11 @@ const App = () => {
   return (
     <StoreProvider>
       <Header />
-      <div>ok</div>
+      <Router>
+        <div className="content-wrapper">
+          <AsideMenu />
+        </div>
+      </Router>
     </StoreProvider>
   );
 };
